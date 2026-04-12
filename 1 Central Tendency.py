@@ -1,6 +1,8 @@
 import statistics as Statistics
 import PyTils.console as console
 
+# source: https://www.geeksforgeeks.org/python/statistics-with-python/
+
 def main():
     console.clear()
     # Measure of Central Tendency
