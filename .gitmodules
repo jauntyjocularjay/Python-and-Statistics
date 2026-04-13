@@ -1,0 +1,3 @@
+[submodule "PyTils"]
+	path = PyTils
+	url = https://github.com/jauntyjocularjay/PyTils
