@@ -33,11 +33,3 @@ represents quantities as comparable bars
 
 a bar chart smooshed together to show continuous data
 
-library(dplyr)
-
-cyl_mpg <- mtcars %>%
-        group_by(cyl) %>%
-        summarise(avg_mpg = mean(mpg, na.rm = TRUE))
-
-ggplot(cyl_mpg, aes(x = factor(cyl), y = avg_mpg)) +
-        geom_bar(stat = "identity")
