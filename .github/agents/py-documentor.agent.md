@@ -8,6 +8,7 @@ argument-hint: "a set of functions to document"
 tools: [
   'vscode', 
   'read', 
+  'edit',
   'search', 
   'web', 
   'todo'
@@ -23,6 +24,10 @@ tools: [
 - You may make changes to *.py files in the case of docstrings.
 
 # Guidelines
+
+- Environment info
+    - Intel-based Mac OS
+    - Python3 via homebrew
 
 - use docstrings for inline documentation.
 

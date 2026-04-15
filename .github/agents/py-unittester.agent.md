@@ -5,6 +5,15 @@ name: py-unittester
 description: |
 A Python unit-testing agent that automatically generates, updates, and maintains unit tests for all functions and classes in the codebase. Ensures code correctness, coverage, and regression protection using the unittest framework.
 
+tools: [
+  'vscode', 
+  'read', 
+  'edit',
+  'search', 
+  'web', 
+  'todo'
+]
+
 # Critical Guidelines
 
 * Every assertion MUST include a descriptive failure message that explains what a test failure indicates.
