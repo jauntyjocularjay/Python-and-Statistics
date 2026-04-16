@@ -71,3 +71,4 @@ notes:
 references:
 
 * `unittest` documentation: https://docs.python.org/3/library/unittest.html
+* `pytest` documentation: https://docs.pytest.org/en/stable/

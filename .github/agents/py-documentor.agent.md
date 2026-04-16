@@ -38,5 +38,6 @@ tools: [
 - use markdown for readme files.
 
 # references:
-  - Python Documentation: https://docs.python.org/3/
+  - Python: https://docs.python.org/3/
   - NumPy: https://numpy.org/doc/stable/
+  - PyTest: https://docs.pytest.org/en/stable/
