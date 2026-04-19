@@ -18,6 +18,7 @@ tools: [
 
 * Every assertion MUST include a descriptive failure message that explains what a test failure indicates.
 * Any test generated without a failure message should be considered non-compliant and must be regenerated.
+* Always ask for confirmation before making changes that expose, alter, or add logic that was previously removed or intentionally hidden.
 * Ensure the reability of the unit tests
 * Include a commended explanation of each test above each assertion or expectation
 
