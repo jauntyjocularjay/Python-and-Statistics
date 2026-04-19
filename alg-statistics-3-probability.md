@@ -1,15 +1,17 @@
-# Probability
+# 3.0 Probability
 
 - is a measure associated with how certain we are of outcomes of a particular activity
 - the long-term relative frequences of an outcome
 - between [0,1] inclusive
 - equal probability, equally likely, means each outcome is equally likely to occur
 
-## outcome
+## 3.1 Terminology
+
+### outcome
 
 the result of an activity
 
-## sample space
+### sample space
 
 the set of possible outcomes
 
@@ -17,46 +19,69 @@ the set of possible outcomes
 - a tree diagram
 - a Venn diagram
 
-## event
+### event
 
 - is any combination of outcomes
 - upper case letters represent events
 - expressed as a probability function ex. *P(x)* = 0.75 = 3/4
 
-## calculating probability
+### calculating probability
 
 1. count the number of outcomes for an event
 1. divide by the total number of outcomes in the sample space
 
-### ex. flipping heads or tails
+#### ex. flipping heads or tails
 
 - the sample space of a fair coin is {HH,TH,HT,TT} where H = heads, T = tails
 - The two outcomes are {HT, TH}
 - *P(A) = 2/4 = 1/2 = 0.5
 
-## Law of Large Numbers
+### Law of Large Numbers
 
 as the number of repetitions increase, the relative frequency tends to approach the theoretical probability
 
-## biased (unfair) outcomes
+### biased (unfair) outcomes
 
 when the observed probability does not approach the the theoretical probability
 
-## Union, 'OR', ∪ event
+### Union, 'OR', ∪ event
 
 - An outcome is in the event A OR B if the outcome is in A or is B or is in both A and B.
 - A OR B is also written as A (union) B: 𝐴∪𝐵
     1. ex. A = {1, 2, 3, 4} and B = {3, 4, 5, 6} 𝐴∪𝐵 = {1, 2, 3, 4, 5, 6}
     2. 𝐴∪𝐵 is a **set** with no repeating outcomes.
 
-## Intersection, 'AND', ∩ event
+### Intersection, 'AND', ∩ event
 
 - An outcome is in the event A AND B if the outcome is both A and B at the same time. 
 - A AND B is written as A intersection B: 𝐴 ∩ 𝐵
     1. ex. A = {1, 2, 3, 4} and B = {3, 4, 5, 6} 𝐴∩𝐵 = {3, 4}
     2. 𝐴∪𝐵 is a **set** with no repeating outcomes.
 
-## Conditional Probability
+### Conditional Probability
 
 - the probability event A will occur given that B has already occured
 - written as *P(A|B)*, *P*robability of *A given B*
+
+### Complementary Event
+
+- The complement of *P(A)* is *P(A')* or every event that is not *P(A)*
+- ex if *P(D) where D=6* of rolling a six sided dice on the number six, *P(D) = 1/6* and *P(D') = 5/6*
+- *P(A)* + *P(A')* = 1
+
+### conditional probability
+
+- *P(A|B)* 'the probability of A given B'
+- meaning *A* will occur if *B* has already occurred.
+- a conditional reduces the sample space
+- The conditional probability of $P(A \mid B)$ is:
+
+$$
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+where:
+
+- $P(A \mid B)$ is the probability of event $A$ occurring given that $B$ has occurred,
+- $P(A \cap B)$ is the probability that both $A$ and $B$ occur,
+- $P(B)$ is the probability that $B$ occurs.
