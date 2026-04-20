@@ -23,7 +23,7 @@ the set of possible outcomes
 
 - is any combination of outcomes
 - upper case letters represent events
-- expressed as a probability function ex. *P(x)* = 0.75 = 3/4
+- expressed as a probability function ex. $P(x) = 3/4  \rightarrow 0.75$
 
 ### calculating probability
 
@@ -34,7 +34,7 @@ the set of possible outcomes
 
 - the sample space of a fair coin is {HH,TH,HT,TT} where H = heads, T = tails
 - The two outcomes are {HT, TH}
-- *P(A) = 2/4 = 1/2 = 0.5
+- $P(A) = 2/4 \rightarrow 1/2 \rightarrow 0.5$
 
 ### Law of Large Numbers
 
@@ -85,3 +85,58 @@ where:
 - $P(A \mid B)$ is the probability of event $A$ occurring given that $B$ has occurred,
 - $P(A \cap B)$ is the probability that both $A$ and $B$ occur,
 - $P(B)$ is the probability that $B$ occurs.
+
+## 3.2 Independent *v* Dependent Events
+
+- Two events are independent if the following are true:
+    1. $P(A \mid B) = P(A)$, and
+    1. $P(A \mid B) = P(B)$, and
+    1. $P(A \land B) = P(A)P(B)$
+- meaning the knowledge of one do not affect the chance the other occurs.
+- ex. the roll of two fair die does not change the probability for the outcome of the other.
+
+### Sampling
+
+#### With Replacement
+
+if each member of a population is replaced after it is picked, then that member has the possibility of being chosen more than once. Sampling done with replacement have independent events meaning the result of the first pick will not change the probabilities for the second pick. This is **independent** because the available pool of picks does not shrink with each pick.
+
+#### Without Replacement
+
+When sampling without replacement, each member of a population may only represent once. In this case, the probabilities of the second pick are affected by the result of the first pick. These event are *dependent* as the available pool of picks shrinks.
+
+#### When in out, assume dependence
+
+- If $P(A)$ and $P(B)$ may be either dependent or independent.
+- *When in doubt, assume they are dependent unless you can show otherwise.*
+
+### Mutually Exclusive Events
+
+- *A* and *B* are **mutually exclusive** events if they cannot occur at the same time. This means that *A* and *B* do not share outcomes.
+- $P(A \land B) = 0$ indicates a relationship is mutually exclusive.
+- When in doubt, *assume events are mutually exclusive unless you can show otherwise*.
+
+#### ex. Mutually *vs* Not Mutually Exclusive
+
+Let:
+
+- $S = \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \} $
+- $A = \{ 1, 2, 3, 4, 5 \}$
+- $B = \{ 4, 5, 6, 7, 8 \}$
+- $C = \{ 7, 9 \}$
+- $P(A \land B) = {4, 5}$
+- The probability of both $P(A)$ and $P(B)$ occurring is:
+- $ P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{2}{10} ; \therefore$ (therefore) **not** mutually exclusive
+- $ P(A \cap C) = \varnothing ; \therefore$ (therefore) mutually exclusive
+
+## 3.3 Two Basic Rules of Probability
+
+### Multiplication Rule
+
+- if A and B are two events defined on a **sample space**, then:
+- $P(A \cap B) = P(B) * P(A|B) \Rightarrow P(A|B) = \frac{ P(A \cap B) }{ P(B) } $
+
+### Addition Rule
+
+- if A and B are defined on a sample space, then: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ and,
+- if A and B are *mutually exclusive*, then $P(A \cap B) = 0 \Rightarrow P(A \cup B) = P(A) + P(B)$
