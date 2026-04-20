@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python -m PyTils.stats
+python -m pytils.stats
 
