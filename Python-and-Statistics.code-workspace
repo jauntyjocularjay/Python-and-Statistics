@@ -4,10 +4,11 @@
 			"path": "."
 		},
 		{
-			"path": "pytils"
+			"path": "pytilities"
+		},
+		{
+			"path": "quantkit"
 		}
 	],
-	"settings": {
-		"python.defaultInterpreterPath": "python"
-	}
+	"settings": {}
 }
