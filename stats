@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python -m pytils.stats
+python -m quantkit.stats
 
