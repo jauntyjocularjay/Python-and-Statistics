@@ -139,4 +139,4 @@ Let:
 ### Addition Rule
 
 - if A and B are defined on a sample space, then: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ and,
-- if A and B are *mutually exclusive*, then $P(A \cap B) = 0 \Rightarrow P(A \cup B) = P(A) + P(B)$
+- if A and B are *mutually exclusive* ⇒ $P(A \cap B) = 0 ⇒ P(A \cup B) = P(A) + P(B)$

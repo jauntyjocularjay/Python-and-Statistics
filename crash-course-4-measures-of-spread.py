@@ -1,6 +1,6 @@
 import math
 import statistics as Statistics
-import PyTils.console as console
+import pytilities.console as console
 
 console.clear()
 
