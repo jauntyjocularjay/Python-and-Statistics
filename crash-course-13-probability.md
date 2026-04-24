@@ -20,5 +20,5 @@ the probability derived mathematically
 
 - if A and B are two events defined on a **sample space**, then:
 - $P(A \cap B) = P(B) * P(A|B) \Rightarrow P(A|B) = \frac{ P(A \cap B) }{ P(B) } $
-- $P(A|B) = $\displaystyle \frac{ P(A \cap B) }{ P(B) }$$ IS THE ONE TO RMEMEMBER
+- $\displaystyle$P(A|B) =  \frac{ P(A \cap B) }{ P(B) }$ IS THE ONE TO RMEMEMBER
 
