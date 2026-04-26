@@ -4,10 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "pytilities"
+			"path": "src/quantkit"
 		},
 		{
-			"path": "quantkit"
+			"path": "src/quantkit/pytilities"
 		}
 	],
 	"settings": {}
