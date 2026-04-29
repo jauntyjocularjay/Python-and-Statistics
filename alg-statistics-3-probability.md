@@ -140,3 +140,56 @@ Let:
 
 - if A and B are defined on a sample space, then: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ and,
 - if A and B are *mutually exclusive* ⇒ $P(A \cap B) = 0 ⇒ P(A \cup B) = P(A) + P(B)$
+
+## 3.4 Contingency Tables
+
+- Portrays data to facilitate probability calculations
+- sample values are displayed in relationship to variables
+
+ex.shows a random sample of 100 hikers and the areas of hiking they prefer.
+
+| Sex    | The Coastline | Near Lakes and Streams| On Mountain Peaks | Total |
+|--------|:-------------:|:---------------------:|:-----------------:|:-----:|
+| Women  |      18       |          16           |                   |  45   |
+| Men    |               |                       |        14         |  55   |
+| Total  |               |          41           |                   |       |
+
+### a. fill out the missing areas 
+
+| Sex    | The Coastline | Near Lakes and Streams| On Mountain Peaks | Total |
+|--------|:-------------:|:---------------------:|:-----------------:|:-----:|
+| Women  |      18       |          16           |        11         |  45   |
+| Men    |      16       |          25           |        14         |  55   |
+| Total  |      34       |          41           |        25         | 100   |
+
+### b. Problem
+
+Are the events "being a woman" and "preferring the coastline" independent events?
+
+Let F = being a woman and let C = preferring the coastline.
+
+1. Find P(F AND C).
+1. Find P(F)P(C)
+
+Are these two numbers the same? If they are, then F and C are independent. If they are not, then F and C are not independent.
+
+### c. Problem
+
+Find the probability that a person is a man given that the person prefers hiking near lakes and streams. Let M = being a man, and let L = prefers hiking near lakes and streams.
+
+1. What word tells you this is a conditional?
+1. Fill in the blanks and calculate the probability: P(___|___) = ___.
+1. Is the sample space for this problem all 100 hikers? If not, what is it?
+
+### d. Problem
+
+Find the probability that a person is a woman or prefers hiking on mountain peaks.
+- Let F = being a woman, and 
+- let P = prefers mountain peaks.
+
+1. Find P(F) = 45/100
+1. Find P(P) = 25/100
+1. Find P(F AND P) = 11/100
+1. Find P(F OR P) = (45+25-11)/100 $ \rightarrow $ 59/100
+
+
