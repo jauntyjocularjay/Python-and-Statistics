@@ -126,8 +126,9 @@ Let:
 - $C = \{ 7, 9 \}$
 - $P(A \land B) = {4, 5}$
 - The probability of both $P(A)$ and $P(B)$ occurring is:
-- $ P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{2}{10} ; \therefore$ (therefore) **not** mutually exclusive
-- $ P(A \cap C) = \varnothing ; \therefore$ (therefore) mutually exclusive
+- $ P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{2}{10} \therefore$ (therefore) **not** mutually exclusive
+- The probability of both $P(A)$ and $P(C)$ occurring is:
+- $ P(A \cap C) = \varnothing \therefore$ (therefore) mutually exclusive
 
 ## 3.3 Two Basic Rules of Probability
 
@@ -146,6 +147,47 @@ Let:
 - Portrays data to facilitate probability calculations
 - sample values are displayed in relationship to variables
 
+### Ex 3.20
+
+Suppose a study of speeding violations and drivers who use cell phones produced the following fictional data:
+
+|                                 | Speeding violation in the last year | No speeding violation in the last year | Total |
+|---------------------------------|:-----------------------------------:|:--------------------------------------:|:-----:|
+| Uses cell phone while driving   |                25                   |                 280                    |  305  |
+| Does not use cell phone while driving |            45                   |                 405                    |  450  |
+| Total                          |                70                   |                 685                    |  755  |
+
+The total number of people in the sample is 755. The row totals are 305 and 450. The column totals are 70 and 685. Notice that 305 + 450 = 755 and 70 + 685 = 755.
+
+Calculate the following probabilities using the table.
+
+- a. Find P(Driver is a cell phone user).
+
+$P(U_t) = 305 / 755$
+
+- b. Find P(driver had no violation in the last year).
+
+$P(V_f) = 685 / 755$
+
+- c. Find P(Driver had no violation in the last year AND was a cell phone user).
+
+$P(V_f \cap U_t) = 280 / 755$
+
+- d. Find P(Driver is a cell phone user OR driver had no violation in the last year).
+
+$P(U_t \cup V_f) = (305 + 685 - 280) / 755 \rightarrow 710 / 755$
+
+- e. Find P(Driver is a cell phone user GIVEN driver had a violation in the last year).
+
+$P(U_t | V_t) = 25 / 70 $
+
+- f. Find P(Driver had no violation last year GIVEN driver was not a cell phone user)
+
+$P(V_f | U_f ) = 405 / 450 $
+
+
+### Ex 3.21
+
 ex.shows a random sample of 100 hikers and the areas of hiking they prefer.
 
 | Sex    | The Coastline | Near Lakes and Streams| On Mountain Peaks | Total |
@@ -154,7 +196,7 @@ ex.shows a random sample of 100 hikers and the areas of hiking they prefer.
 | Men    |               |                       |        14         |  55   |
 | Total  |               |          41           |                   |       |
 
-### a. fill out the missing areas 
+#### a. fill out the missing areas 
 
 | Sex    | The Coastline | Near Lakes and Streams| On Mountain Peaks | Total |
 |--------|:-------------:|:---------------------:|:-----------------:|:-----:|
@@ -162,7 +204,7 @@ ex.shows a random sample of 100 hikers and the areas of hiking they prefer.
 | Men    |      16       |          25           |        14         |  55   |
 | Total  |      34       |          41           |        25         | 100   |
 
-### b. Problem
+#### b. Problem
 
 Are the events "being a woman" and "preferring the coastline" independent events?
 
@@ -173,7 +215,7 @@ Let F = being a woman and let C = preferring the coastline.
 
 Are these two numbers the same? If they are, then F and C are independent. If they are not, then F and C are not independent.
 
-### c. Problem
+#### c. Problem
 
 Find the probability that a person is a man given that the person prefers hiking near lakes and streams. Let M = being a man, and let L = prefers hiking near lakes and streams.
 
@@ -181,7 +223,7 @@ Find the probability that a person is a man given that the person prefers hiking
 1. Fill in the blanks and calculate the probability: P(___|___) = ___.
 1. Is the sample space for this problem all 100 hikers? If not, what is it?
 
-### d. Problem
+#### d. Problem
 
 Find the probability that a person is a woman or prefers hiking on mountain peaks.
 - Let F = being a woman, and 
@@ -190,6 +232,63 @@ Find the probability that a person is a woman or prefers hiking on mountain peak
 1. Find P(F) = 45/100
 1. Find P(P) = 25/100
 1. Find P(F AND P) = 11/100
-1. Find P(F OR P) = (45+25-11)/100 $ \rightarrow $ 59/100
+1. Find P(F OR P) = (45+25-11)/100 $\rightarrow$ 59/100
 
+### 3.23 Example
+
+| Year  |  Robbery  | Burglary  | Vandalism |  Vehicle  |    Total  |
+|-------|-----------|-----------|-----------|-----------|-----------|
+|   1   |     145.7 |     732.1 |      29.7 |     314.7 |    1222.2 |
+|   2   |     133.1 |     717.7 |      29.1 |     259.2 |    1139.1 |
+|   3   |     119.3 |     701.0 |      27.7 |     239.1 |    1087.1 |
+|   4   |     113.7 |     702.2 |      26.8 |     229.6 |    1072.3 |
+| Total |     511.8 |    2853.0 |     113.3 |    1042.6 |    4520.7 |
+
+TOTAL each column and each row. Total data = 4,520.7
+
+- Find $P(Y_2 \cap R)$.
+
+    $ P(Y_2 \cap R) \rightarrow $ 
+
+    $ P(Y_2) + P(R) - P(Y_2 \cup R) \rightarrow $
+
+    $ P(Y_2 \cap R) = \frac{1139.1}{4520.7} + \frac {511.8}{4520.7} - P(Y_2 \cup R) \rightarrow $
+
+    $ P(Y_2 \cap R) = \frac{1139.1}{4520.7} + \frac {511.8}{4520.7} - [\frac{1139.1}{4520.7} +\frac {511.8}{4520.7} - \frac{133.1}{4520.7})] \rightarrow $
+
+    $ P(Y_2 \cap R) = \frac{133.1}{4520.7} \rightarrow P(Y_2 \cap R) = 0.0294 $
+
+- Find P(Y3 AND Burglary).
+
+    $ P(Y_3 \cap B) \rightarrow $
+
+    $ 701 / 4520.7 $
+
+    $ 0.1551 $
+
+- Find P(Y3 OR Burglary).
+
+    $ P(Y_3 \cup B) \rightarrow $
+
+    $ P(Y_3 + B) - P(Y_3 \cap B) $
+
+    $ (1087.1 + 2853.0 - 701) / 4520.7 $
+
+    $ 3239.7 / 4520.7 \approx 0.717 $
+
+
+- Find $P(Y_4 | V_a)$.
+
+    $ P(Y_4) = 1072.3 / 4520.7 $
+    
+    $ P(V_a) =  113.3 / 4520.7 $
+
+    $ P(Y_4|V_a) \rightarrow $
+
+    $ P(Y_4) / P(Y_4 \cap V_a) \rightarrow $
+
+    $ \frac {1072.3}{4520.7} / \frac{26.8}{4520.7} $
+    
+
+- Find P(Vehicle | Year 1).
 

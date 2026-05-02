@@ -10,10 +10,12 @@ the probability derived mathematically
 
 ## addition rule
 
-- The probability of A $\lor$ (||) B occuring is equal to the sum of probabilities of A $\land$ (&&) B minus the probability of both occuring
-- $P(A \lor B) = P(A) + P(B) - P(A \land B)$
+- The probability of A $\cup$ (||) B occuring is equal to the sum of probabilities of A $\cap$ (&&) B minus the probability of both occuring
+- $ P(A \cup B) = P(A) + P(B) - P(A \cap B) $
+- $ P(A \cap B) = P(A) + P(B) - P(A \cup B) $
+- $ P(A + B) = P(A \cap B) + P(A \cup B) $
 - given flipping a coin for TAILS and rolling 1d6 for s6
-     - $P(TAILS \lor s6) = P(TAILS) + P(s6) - P(TAILS \land s6)$
+     - $P(TAILS \cup s6) = P(TAILS) + P(s6) - P(TAILS \cap s6)$
      - because the outcome of flipping tails and s6 gets counted twice we need to subtract off when both happen.
 
 ## multiplication rule

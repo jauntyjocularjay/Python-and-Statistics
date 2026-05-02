@@ -29,4 +29,3 @@ Highlight specific instances where the candidate exhibited strong analytical ski
 ## Why is the candidate a strong fit for this institution’s cybersecurity program?
 
 Offer an objective assessment of the applicant’s suitability for the program, emphasizing how their qualifications, values, and aspirations align with the institute’s academic and research objectives.
-W
