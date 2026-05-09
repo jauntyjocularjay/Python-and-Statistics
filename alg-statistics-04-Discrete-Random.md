@@ -7,7 +7,6 @@ a discrete probability function (PDF) has
 1. each probability is between [Zero, one] inclusive
 2. The sum of the probabilities is one
 
-
 |   P(x)       |     x     |
 |--------------|-----------|
 | $ P(x_0) $   |  2/50     |
@@ -17,7 +16,6 @@ a discrete probability function (PDF) has
 | $ P(x_4) $   |  4/50     |
 | $ P(x_5) $   |  1/50     |
 | $ \sum P(x)$ | 50/50 = 1 |
-
 
 ## 4.2 Mean Expected Value and Standard Deviation
 
@@ -40,10 +38,11 @@ When the outcomes of a probability distribution are equally likely, these formul
 
 outcomes of a binomial experiment fit a binomial probability distribution. The variable x = the number of successes obtained in the n independent trials.
 
-μ = the mean 
+μ = the mean
 σ² = variance
 
 for a binomial probability distribution
+
 - μ = np (trials • successes)
 - σ² = npq
 - standard deviation = σ = √npq
@@ -82,8 +81,6 @@ Let X = the number of accidents the safety engineer must examine until they find
 
 $ μ = (p)^{-1} \rightarrow (35/100)^{-1} \rightarrow (100/3.5) ≈ 2.8 $
 
-
-
 ### Example 4.19
 
 Suppose that you are looking for a student at your college who lives within five miles of you. You know that 55% of the 25,000 students do live within five miles of you. You randomly contact students from the college until one says they live within five miles of you. What is the probability that you need to contact four people?
@@ -95,6 +92,7 @@ This is a geometric problem because you may have a number of failures before you
 a. Let X = the number of _students_ you must ask _before_ one says yes.
 
 b. What values does X take on?
+
 - The total number of attempts made.
 
 c. What are p and q?
@@ -103,4 +101,55 @@ c. What are p and q?
 - $ q = 0.45 $
 - μ (the mean) = $ p^{-1} \rightarrow $ (100/55) $ => $ 1.82 contacts before reaching somebody as intended.
 
-d. The probability question is P(_5/100_).
+d. The probability question is P(_5/100_)
+
+## Geometric Distribution Function Notation
+
+$ x $ ~ $ G(p) $
+
+- x: the value x
+- ~: is a random variable
+- G(): with a geometric distribution
+- p: where p is the probability of success
+
+### Case 1: Random Variable x is event of first success
+
+Equation: $ p(x)=(1-p)^{x-1} p $
+
+Standard Deviation: $ σ = \sqrt{ \frac {p}{(1-p)^2}} $
+
+### Case 2: Random Variable x is number of failures before success
+
+Equation: $ P(x) = (1-p)^{x} p $
+
+Mean: $ μ = \frac{1-p}{p} $
+
+Standard Deviation: $σ = \sqrt{ \frac{1-p}{p} } \Rightarrow \sqrt{μ_{case 2}} $
+
+### Example 4.20
+
+Assume that the probability of a defective computer component is 0.02. Components are randomly selected. Find the probability that the first defect is caused by the seventh component tested. How many components do you expect to test until one is found to be defective?
+
+Let X = the number of computer components tested until the first defect is found.
+
+X takes on the values 1, 2, 3, ... where p = 0.02.
+
+Find P(x = 7). P(x = 7) = 0.0177
+
+- p = 0.02
+- $ (1 - p) = 0.98 $
+- $ P(x) = p^1 \cdot (1-p)^{x-1} \rightarrow (0.02) * (0.98)^6 \rightarrow 0.0177 $
+
+### Example 4.21
+
+The lifetime risk of developing cancer is about one in 67 (1.5%). Let X = the number of people you ask until one says they have cancer. Then X is a discrete random variable with a geometric distribution:
+
+X ~ 𝐺⁡( $ \frac{1}{67} $ ) or X ~ $ 𝐺⁡(0.015) $
+
+- What is the probability of that you ask ten people before one says they have cancer?
+  - p = $ \frac{1}{67} $, q = $ \frac{66}{67} $
+  - G(x) = $ q^{x-1} \cdot p $
+  - G(x) = $ (\frac{66}{67})^{9} \frac{1}{67} $
+- What is the probability that you must ask 20 people?
+  - G(x) = $ (\frac{66}{67})^{19} \frac{1}{67} $
+- Find the (i) mean and (ii) standard deviation of X

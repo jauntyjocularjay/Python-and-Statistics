@@ -16,7 +16,7 @@ tools: [
 
 # Critical Guidelines
 
-* Every assertion MUST include a descriptive failure message that explains what a test failure indicates.
+* Every assertion MUST include a descriptive failure message that explains the expected and actual returns.
 * Any test generated without a failure message should be considered non-compliant and must be regenerated.
 * Always determine and flag if the error is in the code rather than the test.
 * Always ask for confirmation before making changes that expose, alter, or add logic that was previously removed or intentionally hidden.

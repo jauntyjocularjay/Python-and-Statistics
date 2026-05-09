@@ -1,73 +1,60 @@
 # 15 Binomial Distribution
 
-| day |  Mon  |  Tue  |  Wed  |  Thu  |  Fri  |
-|-----|-------|-------|-------|-------|-------|
-|  1  |  0.2  |  0.8  |  0.8  |  0.8  |  0.8  | => 0.082
-|  2  |  0.8  |  0.2  |  0.8  |  0.8  |  0.8  | => 0.082
-|  3  |  0.8  |  0.8  |  0.2  |  0.8  |  0.8  | => 0.082
-|  4  |  0.8  |  0.8  |  0.8  |  0.2  |  0.8  | => 0.082
-|  5  |  0.8  |  0.8  |  0.8  |  0.8  |  0.2  | => 0.082
+∵ the random variable X counts successes
+
+1. fixed `n` number of trials before the experiment begins
+1. `two outcomes`: success and failure (p + q = 1)
+1. the probability of success `p` across all trials is constant
+1. trials are independent (the outcome of one trial does not change the probabilty of any other trial)
+
+## ex. Illustrating the outcomes
+
+| day |  Mon  |  Tue  |  Wed  |  Thu  |  Fri  |product|
+|-----|-------|-------|-------|-------|-------|-------|
+|  1  |  0.2  |  0.8  |  0.8  |  0.8  |  0.8  | 0.082 |
+|  2  |  0.8  |  0.2  |  0.8  |  0.8  |  0.8  | 0.082 |
+|  3  |  0.8  |  0.8  |  0.2  |  0.8  |  0.8  | 0.082 |
+|  4  |  0.8  |  0.8  |  0.8  |  0.2  |  0.8  | 0.082 |
+|  5  |  0.8  |  0.8  |  0.8  |  0.8  |  0.2  | 0.082 |
 
 Multiply across, add down
 
 $ 5 \times 0.2^1 \times 0.8^4 $
 
-## Binomial Coefficient Formula
+## Binomial Formula
 
-$ nCk \rightarrow $ n choose k $ \rightarrow $ of N choices, choose K of them
+### Coefficient
 
-- n = number of possibilities
-- C = choose
-- k = desired outcomes
+the binomial coefficient formula is read as: 'N choose K'
 
-binom(n,k) = $ n C k \cdot p^k \cdot (1-p)^{n-k} $
+∵ n = number of trials, k = successful outcomes
 
-given: 1 = $ p - q $
+∴ $ nCk = \frac{n!}{k! \cdot (n-k)!} $
 
-binom(n,k) = $ n C x \cdot p^k \cdot q^{n-k} $
+### Probability of Success and Failure
 
-binom(20, 0) = $ nCk \rightarrow $
+$ p^k \cdot (1-p)^{n-k} $
 
-$ (0.05)^0 \cdot (0.95)^{20} \approx 0.358 $
+### Together
 
-### General Formula
+binom(n,k) = $ \binom{n=20}{k=0} \cdot p^k \cdot (1-p)^{n-k} $
 
-$ p^s \cdot (p-1)^f $
+binom(n,k) = $ \frac{n!}{k! (n-k)!} \cdot p^k \cdot (1-p)^{n-k} $
 
-- p -> success -> a year without a flat tire
-- (1 - p) -> failure -> A year with a flat tire
-- s = successes
-- f = failures
+### Example: Flat Tires
 
-### Example
+- p: is the probability of getting a flat tire in one year.
+- n: is the range of years observed (number of trials)
+- k: is the number years with a flat tire
 
-Given:
-- p = 0.05
-- q = 0.95
-- 20 possible outcomes
-- Choose zero
+given:
 
-binom(20, 0) = $ nCk \rightarrow $
+- ∵ p = 0.05
+- ∵ n = 20
+- ∵ k = 1
 
-$ (0.05)^0 \cdot (0.95)^{20} \approx 0.358 $
+therefore:
 
-update: Choose 1
-
-binom(20, 1) = $ nCk \rightarrow $
-
-$ (0.05)^1 \cdot (0.95)^{20-1} \rightarrow $
-
-$ 0.05 \cdot (0.95)^{19} \approx 0.018 $
-
-### Example Flat Tires
-
-f(s,f)$ 0.05^s \cdot 0.95^f $
-
-|   p  | f(s) | f(s) |
-|------|------|---------|
-|   1  | 0.95 | 0.05    |
-|   2  | 0.90 | 0.25e-1 |
-|   3  | 0.85 | 0.125e-2|
-|   4  | 0.81 | 0.625e-5|
-
-![Probabilities of a Flat Tiers](assets/crash-course-14-binomial-distribution.jpg)
+- ∴ binom(20, 1)
+- ∴ $ 1 \cdot (0.05)^1 \cdot (0.95)^{20} $
+- ∴ $ \approx 0.358 $
