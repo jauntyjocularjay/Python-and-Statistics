@@ -1,194 +1,564 @@
 # 3.0 Probability
 
-- is a measure associated with how certain we are of outcomes of a particular activity
-- the long-term relative frequences of an outcome
-- between [0,1] inclusive
-- equal probability, equally likely, means each outcome is equally likely to occur
+Probability is a numerical way to describe uncertainty. It tells us how likely an outcome or event is, using values between 0 and 1.
+
+- $P(A) = 0$ means event $A$ is impossible
+- $P(A) = 1$ means event $A$ is certain
+- probabilities between 0 and 1 measure different levels of likelihood
+- if two outcomes are equally likely, they have the same probability
+
+Probability can be understood in two related ways:
+
+- **theoretical probability** comes from a mathematical model
+- **empirical probability** comes from observed data
+
+Over many repetitions of the same experiment, empirical results tend to move closer to theoretical values. This is the idea behind the **law of large numbers**.
 
 ## 3.1 Terminology
 
-### outcome
+### Experiment
 
-the result of an activity
+An **experiment** is a process or action that produces an outcome.
 
-### sample space
+- flipping a coin
+- rolling a die
+- drawing a card
+- selecting a person from a group
 
-the set of possible outcomes
+A **chance experiment** is an experiment whose outcome is not known in advance.
 
-- as list
-- a tree diagram
-- a Venn diagram
+### Outcome
 
-### event
+An **outcome** is one specific result of an experiment.
 
-- is any combination of outcomes
-- upper case letters represent events
-- expressed as a probability function ex. $P(x) = 3/4  \rightarrow 0.75$
+Examples:
 
-### calculating probability
+- when rolling one die, an outcome could be 4
+- when flipping two coins, an outcome could be HT
 
-1. count the number of outcomes for an event
-1. divide by the total number of outcomes in the sample space
+### Sample Space
 
-#### ex. flipping heads or tails
+The **sample space** is the set of all possible outcomes of an experiment.
 
-- the sample space of a fair coin is {HH,TH,HT,TT} where H = heads, T = tails
-- The two outcomes are {HT, TH}
-- $P(A) = 2/4 \rightarrow 1/2 \rightarrow 0.5$
+It is often written as $S$.
 
-### Law of Large Numbers
+Examples:
 
-as the number of repetitions increase, the relative frequency tends to approach the theoretical probability
+- one coin flip: $S = \{H, T\}$
+- one die roll: $S = \{1,2,3,4,5,6\}$
+- two coin flips: $S = \{HH, HT, TH, TT\}$
 
-### biased (unfair) outcomes
+A sample space can be represented in several ways:
 
-when the observed probability does not approach the the theoretical probability
+- as a list
+- as a tree diagram
+- as a Venn diagram
 
-### Union, 'OR', ∪ event
+### Event
 
-- An outcome is in the event A OR B if the outcome is in A or is B or is in both A and B.
-- A OR B is also written as A (union) B: 𝐴∪𝐵
-    1. ex. A = {1, 2, 3, 4} and B = {3, 4, 5, 6} 𝐴∪𝐵 = {1, 2, 3, 4, 5, 6}
-    2. 𝐴∪𝐵 is a **set** with no repeating outcomes.
+An **event** is a collection of one or more outcomes from the sample space.
 
-### Intersection, 'AND', ∩ event
+Events are usually labeled with capital letters such as $A$, $B$, and $C$.
 
-- An outcome is in the event A AND B if the outcome is both A and B at the same time. 
-- A AND B is written as A intersection B: 𝐴 ∩ 𝐵
-    1. ex. A = {1, 2, 3, 4} and B = {3, 4, 5, 6} 𝐴∩𝐵 = {3, 4}
-    2. 𝐴∪𝐵 is a **set** with no repeating outcomes.
+Examples for rolling one die:
 
-### Conditional Probability
+- $A = \{2,4,6\}$ means “roll an even number”
+- $B = \{1,2,3\}$ means “roll a number less than 4”
+- $C = \{5\}$ means “roll a 5”
 
-- the probability event A will occur given that B has already occured
-- written as *P(A|B)*, *P*robability of *A given B*
+The probability of event $A$ is written $P(A)$.
 
-### Complementary Event
+### Equally Likely Outcomes
 
-- The complement of *P(A)* is *P(A')* or every event that is not *P(A)*
-- ex if *P(D) where D=6* of rolling a six sided dice on the number six, *P(D) = 1/6* and *P(D') = 5/6*
-- *P(A)* + *P(A')* = 1
+Outcomes are **equally likely** if each outcome has the same chance of occurring.
 
-### conditional probability
+Examples:
 
-- *P(A|B)* 'the probability of A given B'
-- meaning *A* will occur if *B* has already occurred.
-- a conditional reduces the sample space
-- The conditional probability of $P(A \mid B)$ is:
+- outcomes of a fair coin are equally likely
+- outcomes of a fair die are equally likely
+
+If outcomes are equally likely and the sample space is finite, then:
 
 $$
-P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+P(A) = \frac{|A|}{|S|}
 $$
 
 where:
 
-- $P(A \mid B)$ is the probability of event $A$ occurring given that $B$ has occurred,
-- $P(A \cap B)$ is the probability that both $A$ and $B$ occur,
-- $P(B)$ is the probability that $B$ occurs.
+- $|A|$ is the number of outcomes in event $A$
+- $|S|$ is the number of outcomes in the sample space
 
-## 3.2 Independent *v* Dependent Events
+Example:
 
-- Two events are independent if the following are true:
-    1. $P(A \mid B) = P(A)$, and
-    1. $P(A \mid B) = P(B)$, and
-    1. $P(A \land B) = P(A)P(B)$
-- meaning the knowledge of one do not affect the chance the other occurs.
-- ex. the roll of two fair die does not change the probability for the outcome of the other.
+If a fair die is rolled and $A = \{2,4,6\}$, then:
 
-### Sampling
+$$
+P(A) = \frac{3}{6} = \frac{1}{2}
+$$
+
+### The Law of Large Numbers
+
+If the same experiment is repeated many times, the relative frequency of an outcome tends to get closer to its theoretical probability.
+
+Example:
+
+- in a small number of coin flips, heads may not appear exactly half the time
+- in a very large number of flips, the proportion of heads should move closer to $0.5$
+
+### Biased Outcomes
+
+A process is **biased** if outcomes are not equally likely.
+
+Examples:
+
+- a loaded die
+- a weighted coin
+
+A biased process still has probabilities. The difference is that the outcomes no longer all have the same probability.
+
+### Union: “OR”
+
+The event $A \cup B$ means:
+
+- outcome is in $A$
+- or in $B$
+- or in both
+
+This is called the **union** of $A$ and $B$.
+
+Example:
+
+Let
+
+- $A = \{1,2,3,4\}$
+- $B = \{3,4,5,6\}$
+
+Then
+
+$$
+A \cup B = \{1,2,3,4,5,6\}
+$$
+
+### Intersection: “AND”
+
+The event $A \cap B$ means the outcome is in both $A$ and $B$.
+
+This is called the **intersection** of $A$ and $B$.
+
+Example:
+
+Let
+
+- $A = \{1,2,3,4\}$
+- $B = \{3,4,5,6\}$
+
+Then
+
+$$
+A \cap B = \{3,4\}
+$$
+
+### Complement
+
+The **complement** of event $A$ is the event that $A$ does not occur.
+
+It is written $A^c$ or sometimes $A'$.
+
+Key rule:
+
+$$
+P(A) + P(A^c) = 1
+$$
+
+equivalently,
+
+$$
+P(A^c) = 1 - P(A)
+$$
+
+Example:
+
+If $A =$ rolling an even number on a fair die, then
+
+- $A = \{2,4,6\}$
+- $A^c = \{1,3,5\}$
+
+### Conditional Probability
+
+A **conditional probability** is the probability that event $A$ occurs given that event $B$ has already occurred.
+
+It is written:
+
+$$
+P(A \mid B)
+$$
+
+Formula:
+
+$$
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+\quad \text{provided } P(B) > 0
+$$
+
+Interpretation:
+
+- the original sample space is reduced to $B$
+- then we ask how much of $B$ also belongs to $A$
+
+Example:
+
+Roll one fair die.
+
+Let
+
+- $A = \{2,3\}$
+- $B = \{2,4,6\}$
+
+Then:
+
+- $A \cap B = \{2\}$
+- $P(A \mid B) = \frac{1/6}{3/6} = \frac{1}{3}$
+
+## 3.2 Independent and Mutually Exclusive Events
+
+Independent events and mutually exclusive events are different ideas.
+
+### Independent Events
+
+Two events are **independent** if knowing that one occurred does not change the probability of the other.
+
+Equivalent tests for independence is if two events are independent if any one of the following equivalent conditions holds:
+
+1. $ P(A \mid B) = P(A) $
+1. $ P(B \mid A) = P(B) $
+1. $ P(A \cap B) = P(A)P(B) $
+
+To prove independence, it is enough to verify one of these conditions.
+
+Example:
+
+Let
+
+- $A =$ first coin flip is heads
+- $B =$ second coin flip is heads
+
+Then the result of the first flip does not affect the second, so $A$ and $B$ are independent.
+
+### Dependent Events
+
+Two events are **dependent** if the occurrence of one changes the probability of the other.
+
+Example:
+
+Drawing two cards from a deck **without replacement** creates dependence, because the first draw changes the composition of the deck.
+
+### Sampling With and Without Replacement
 
 #### With Replacement
 
-if each member of a population is replaced after it is picked, then that member has the possibility of being chosen more than once. Sampling done with replacement have independent events meaning the result of the first pick will not change the probabilities for the second pick. This is **independent** because the available pool of picks does not shrink with each pick.
+When an item is replaced after selection, the pool does not change.
+
+- later probabilities stay the same
+- events are treated as independent
 
 #### Without Replacement
 
-When sampling without replacement, each member of a population may only represent once. In this case, the probabilities of the second pick are affected by the result of the first pick. These event are *dependent* as the available pool of picks shrinks.
+When an item is not replaced, the pool changes.
 
-#### When in out, assume dependence
-
-- If $P(A)$ and $P(B)$ may be either dependent or independent.
-- *When in doubt, assume they are dependent unless you can show otherwise.*
+- later probabilities change
+- events are dependent
 
 ### Mutually Exclusive Events
 
-- *A* and *B* are **mutually exclusive** events if they cannot occur at the same time. This means that *A* and *B* do not share outcomes.
-- $P(A \land B) = 0$ indicates a relationship is mutually exclusive.
-- When in doubt, *assume events are mutually exclusive unless you can show otherwise*.
+Two events are **mutually exclusive** if they cannot happen at the same time.
 
-#### ex. Mutually *vs* Not Mutually Exclusive
+That means:
 
-Let:
+$$
+A \cap B = \varnothing
+$$
 
-- $S = \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \} $
-- $A = \{ 1, 2, 3, 4, 5 \}$
-- $B = \{ 4, 5, 6, 7, 8 \}$
-- $C = \{ 7, 9 \}$
-- $P(A \land B) = {4, 5}$
-- The probability of both $P(A)$ and $P(B)$ occurring is:
-- $ P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{2}{10} \therefore$ (therefore) **not** mutually exclusive
-- The probability of both $P(A)$ and $P(C)$ occurring is:
-- $ P(A \cap C) = \varnothing \therefore$ (therefore) mutually exclusive
+and therefore:
+
+$$
+P(A \cap B) = 0
+$$
+
+Example:
+
+Roll one die.
+
+Let
+
+- $A = \{1,2\}$
+- $B = \{5,6\}$
+
+Then $A$ and $B$ are mutually exclusive because no single roll can be in both sets.
+
+### Important Distinction
+
+- **independent** means one event does not affect the probability of the other
+- **mutually exclusive** means the two events cannot happen together
+
+These are not the same.
+
+In fact, if two events with positive probability are mutually exclusive, then they are not independent.
+
+Why?
+
+If $A$ and $B$ are mutually exclusive, then:
+
+$$
+P(A \cap B) = 0
+$$
+
+But if they were independent, we would need:
+
+$$
+P(A \cap B) = P(A)P(B)
+$$
+
+If both $P(A)$ and $P(B)$ are positive, then $P(A)P(B) > 0$, which contradicts mutual exclusivity.
+
+### Safe Defaults
+
+- if independence is not justified, do not assume it
+- if mutual exclusivity is not clear, do not assume it
+- begin with the general rule, then simplify only when the conditions are known
 
 ## 3.3 Two Basic Rules of Probability
 
-### Multiplication Rule
+### The Multiplication Rule
 
-- if A and B are two events defined on a **sample space**, then:
-- $P(A \cap B) = P(B) * P(A|B) \Rightarrow P(A|B) = \frac{ P(A \cap B) }{ P(B) } $
+For any two events $A$ and $B$:
 
-### Addition Rule
+$$
+P(A \cap B) = P(B)P(A \mid B)
+$$
 
-- if A and B are defined on a sample space, then: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ and,
-- if A and B are *mutually exclusive* ⇒ $P(A \cap B) = 0 ⇒ P(A \cup B) = P(A) + P(B)$
+This can also be written as:
+
+$$
+P(A \cap B) = P(A)P(B \mid A)
+$$
+
+If $A$ and $B$ are independent, then:
+
+$$
+P(A \cap B) = P(A)P(B)
+$$
+
+#### Example Multiplication Rule
+
+Suppose:
+
+- $P(A) = 0.6$
+- $P(B \mid A) = 0.3$
+
+Then:
+
+$$ 
+P(A \cap B) = 0.6(0.3) = 0.18
+$$
+
+### The Addition Rule
+
+For any two events $A$ and $B$:
+
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+
+Why subtract?
+
+Because the outcomes in the union of $A$ and $B$ get counted twice when you add $P(A)$ and $P(B)$.
+
+If $A$ and $B$ are mutually exclusive, then $P(A \cap B)=0$, so the rule simplifies to:
+
+$$
+P(A \cup B) = P(A) + P(B)
+$$
+
+#### Example: Addition Rule
+
+Suppose:
+
+- $P(A) = 0.40$
+- $P(B) = 0.35$
+- $P(A \cap B) = 0.10$
+
+Then:
+
+$$
+P(A \cup B) = 0.40 + 0.35 - 0.10 = 0.65
+$$
+
+### Strategy for Two-Event Problems
+
+When solving probability questions involving two events, ask:
+
+1. Is the question asking for AND, OR, or GIVEN?
+2. Is there overlap between the events?
+3. Are the events independent?
+4. Are the events mutually exclusive?
+
+Use:
+
+- AND $\rightarrow$ [multiplication rule](#the-multiplication-rule)
+- OR $\rightarrow$ [addition rule](#the-addition-rule)
+- GIVEN $\rightarrow$ [conditional probability formula](#conditional-probability)
+
+## Compacted conversationI'll rewrite Section 3.4 to keep your contingency table examples integrated with clearer explanations of how to extract different types of probabilities from the tables. Let me first read the full context of what's currently in the file. 
+
+Read [](file:///home/jadedrakerider/Workspace/Python3/Python-and-Statistics/alg-statistics-03-probability.md#1-1), lines 1 to 450
+
+Read [](file:///home/jadedrakerider/Workspace/Python3/Python-and-Statistics/alg-statistics-03-probability.md#450-450), lines 450 to 610
+
+Now I'll rewrite Section 3.4 to integrate your tables clearly with explanations of how to extract each type of probability. I'll also fix an error I notice in Example 3.23 (the first problem uses the addition rule incorrectly for finding an intersection). 
+
+Read [](file:///home/jadedrakerider/Workspace/Python3/Python-and-Statistics/alg-statistics-03-probability.md#435-435), lines 435 to 610
+
+Now I'll rewrite Section 3.4 with better organization that flows from table structure → probability types → applying rules to tables. I'll keep your examples and fix a couple of errors I noticed. 
+
+Read [](file:///home/jadedrakerider/Workspace/Python3/Python-and-Statistics/alg-statistics-03-probability.md#417-417), lines 417 to 610
+
+I'll create a comprehensive rewrite of Section 3.4. This version will flow better, integrate your tables as primary teaching examples, and fix the errors in Example 3.23. 
+
+Read [](file:///home/jadedrakerider/Workspace/Python3/Python-and-Statistics/alg-statistics-03-probability.md)
+
+Now I'll create the replacement text for Section 3.4. This will keep your examples and reorganize the content to flow more logically.
+
+Based on my analysis, I need to rewrite Section 3.4 starting at line 417. Here's a comprehensive rewrite that:
+
+1. **Flows logically**: Reading tables → extracting probabilities → applying rules → testing independence
+2. **Integrates your examples**: Uses them as primary teaching tools with clear explanations
+3. **Fixes errors**: The first problem in Example 3.23 and the conditional probability in the last problem
+4. **Adds clarity**: Shows exactly what part of the table to use for each probability type
+
+Here's the new Section 3.4 to replace lines 417-610:
 
 ## 3.4 Contingency Tables
 
-- Portrays data to facilitate probability calculations
-- sample values are displayed in relationship to variables
+A **contingency table** organizes counts for two categorical variables and displays all possible combinations of outcomes for both variables.
 
-### Ex 3.20
+It is useful for:
 
-Suppose a study of speeding violations and drivers who use cell phones produced the following fictional data:
+- computing probabilities directly from observed data
+- identifying relationships between categorical variables
+- testing whether events are independent
 
-|                                 | Speeding violation in the last year | No speeding violation in the last year | Total |
-|---------------------------------|:-----------------------------------:|:--------------------------------------:|:-----:|
+### Reading a Contingency Table
+
+The structure of any contingency table follows a consistent pattern:
+
+- **interior cells** contain **joint counts** (observations in both categories)
+- **row totals** (rightmost column) contain **marginal counts** for that row
+- **column totals** (bottom row) contain **marginal counts** for that column
+- **grand total** (bottom-right cell) is the total sample size $N$
+
+### The Three Types of Probabilities from a Table
+
+Given a contingency table with sample size $N$:
+
+#### Marginal Probability
+
+A **marginal probability** is the probability of one event, ignoring the other variable.
+
+$$
+P(\text{event}) = \frac{\text{row total or column total}}{N}
+$$
+
+The name "marginal" comes from reading values in the *margins* (edges) of the table.
+
+#### Joint Probability
+
+A **joint probability** is the probability that both events occur together.
+
+$$
+P(A \cap B) = \frac{\text{interior cell count}}{N}
+$$
+
+The interior cell already contains the count of outcomes in the intersection, so use it directly.
+
+#### Conditional Probability
+
+A **conditional probability** is the probability of one event given that another has occurred.
+
+$$
+P(A \mid B) = \frac{\text{interior cell (the intersection)}}{B\text{'s row or column total (the condition)}}
+$$
+
+The key: when you condition on event $B$, the *reduced sample space* becomes $B$'s total, not $N$.
+
+### Example 3.20: Cell Phone Use and Speeding Violations
+
+Suppose a study of speeding violations  and drivers who use cell phones in the last year produced the following data:
+
+|                                 | Speeding violation | No speeding violation | Total |
+|---------------------------------| ------------------ | --------------------- | ----- |
 | Uses cell phone while driving   |                25                   |                 280                    |  305  |
 | Does not use cell phone while driving |            45                   |                 405                    |  450  |
 | Total                          |                70                   |                 685                    |  755  |
 
-The total number of people in the sample is 755. The row totals are 305 and 450. The column totals are 70 and 685. Notice that 305 + 450 = 755 and 70 + 685 = 755.
+The total sample size is $N = 755$.
 
-Calculate the following probabilities using the table.
+**Understanding the table:**
+- Row 1 total (305): drivers who use cell phones
+- Row 2 total (450): drivers who do not use cell phones
+- Column 1 total (70): drivers with violations
+- Column 2 total (685): drivers without violations
+- Interior cells: counts of drivers in each combination
 
-- a. Find P(Driver is a cell phone user).
+**Extracting probabilities:**
 
-$P(U_t) = 305 / 755$
+a. **Marginal probability — P(Driver is a cell phone user)**
 
-- b. Find P(driver had no violation in the last year).
+This is just one category, so use the row total:
+$$P(U) = \frac{305}{755}$$
 
-$P(V_f) = 685 / 755$
+b. **Marginal probability — P(Driver had no violation)**
 
-- c. Find P(Driver had no violation in the last year AND was a cell phone user).
+$$P(V^c) = \frac{685}{755}$$
 
-$P(V_f \cap U_t) = 280 / 755$
+c. **Joint probability — P(Driver had no violation AND was a cell phone user)**
 
-- d. Find P(Driver is a cell phone user OR driver had no violation in the last year).
+Find the interior cell where these overlap (row 1, column 2):
+$$P(V^c \cap U) = \frac{280}{755}$$
 
-$P(U_t \cup V_f) = (305 + 685 - 280) / 755 \rightarrow 710 / 755$
+Note: Do not compute this indirectly using the addition rule. The cell already contains the intersection count.
 
-- e. Find P(Driver is a cell phone user GIVEN driver had a violation in the last year).
+d. **Application of addition rule — P(Driver is a cell phone user OR driver had no violation)**
 
-$P(U_t | V_t) = 25 / 70 $
+Use the addition rule formula $P(A \cup B) = P(A) + P(B) - P(A \cap B)$:
+$$P(U \cup V^c) = \frac{305 + 685 - 280}{755} = \frac{710}{755}$$
 
-- f. Find P(Driver had no violation last year GIVEN driver was not a cell phone user)
+e. **Conditional probability — P(Driver is a cell phone user | driver had a violation)**
 
-$P(V_f | U_f ) = 405 / 450 $
+Given that the driver had a violation, the reduced sample space is the "violation" column (total = 70).
+Of those, 25 used a cell phone:
+$$P(U \mid V) = \frac{25}{70}$$
 
+f. **Conditional probability — P(Driver had no violation | driver was not a cell phone user)**
 
-### Ex 3.21
+Given that the driver does not use a cell phone, the reduced sample space is row 2 (total = 450).
+Of those, 405 had no violation:
+$$P(V^c \mid U^c) = \frac{405}{450}$$
 
-ex.shows a random sample of 100 hikers and the areas of hiking they prefer.
+### Testing Independence Using Contingency Tables
+
+Two events $A$ and $B$ are **independent** if any of these equivalent conditions holds:
+
+1. $P(A \mid B) = P(A)$
+2. $P(B \mid A) = P(B)$
+3. $P(A \cap B) = P(A) \cdot P(B)$
+
+In a contingency table, check the third condition: compute $P(A \cap B)$ directly from the table, then compute $P(A) \cdot P(B)$ using marginal probabilities. If they are equal, the events are independent.
+
+### Example 3.21: Hiking Preferences by Gender
+
+This example shows a random sample of 100 hikers and their preferred hiking areas.
+
+**Incomplete table:**
 
 | Sex    | The Coastline | Near Lakes and Streams| On Mountain Peaks | Total |
 |--------|:-------------:|:---------------------:|:-----------------:|:-----:|
@@ -196,7 +566,9 @@ ex.shows a random sample of 100 hikers and the areas of hiking they prefer.
 | Men    |               |                       |        14         |  55   |
 | Total  |               |          41           |                   |       |
 
-#### a. fill out the missing areas 
+**a. Fill in the missing values**
+
+Work from row totals and column totals:
 
 | Sex    | The Coastline | Near Lakes and Streams| On Mountain Peaks | Total |
 |--------|:-------------:|:---------------------:|:-----------------:|:-----:|
@@ -204,91 +576,86 @@ ex.shows a random sample of 100 hikers and the areas of hiking they prefer.
 | Men    |      16       |          25           |        14         |  55   |
 | Total  |      34       |          41           |        25         | 100   |
 
-#### b. Problem
+**b. Test independence: Are "being a woman" and "preferring the coastline" independent?**
 
-Are the events "being a woman" and "preferring the coastline" independent events?
+Let $F$ = being a woman and $C$ = preferring the coastline.
 
-Let F = being a woman and let C = preferring the coastline.
+Condition 3: Check if $P(F \cap C) = P(F) \cdot P(C)$
 
-1. Find P(F AND C).
-1. Find P(F)P(C)
+From the table:
+- $P(F \cap C) = \frac{18}{100} = 0.18$ (interior cell ÷ grand total)
+- $P(F) = \frac{45}{100} = 0.45$ (row total ÷ grand total)
+- $P(C) = \frac{34}{100} = 0.34$ (column total ÷ grand total)
+- $P(F) \cdot P(C) = 0.45 \times 0.34 = 0.153$
 
-Are these two numbers the same? If they are, then F and C are independent. If they are not, then F and C are not independent.
+Since $0.18 \neq 0.153$, the events are **not independent**. Gender and coastline preference are related in this sample.
 
-#### c. Problem
+**c. Conditional probability: P(Man | Prefers lakes and streams)**
 
-Find the probability that a person is a man given that the person prefers hiking near lakes and streams. Let M = being a man, and let L = prefers hiking near lakes and streams.
+Let $M$ = being a man and $L$ = prefers hiking near lakes and streams.
 
-1. What word tells you this is a conditional?
-1. Fill in the blanks and calculate the probability: P(___|___) = ___.
-1. Is the sample space for this problem all 100 hikers? If not, what is it?
+Given preference for lakes (the condition), the reduced sample space is the "Near Lakes and Streams" column (total = 41).
+Of those, 25 are men:
+$$P(M \mid L) = \frac{25}{41}$$
 
-#### d. Problem
+The sample space for this problem is not all 100 hikers—it is the 41 people who prefer lakes and streams.
 
-Find the probability that a person is a woman or prefers hiking on mountain peaks.
-- Let F = being a woman, and 
-- let P = prefers mountain peaks.
+**d. Union probability: P(Woman OR prefers mountain peaks)**
 
-1. Find P(F) = 45/100
-1. Find P(P) = 25/100
-1. Find P(F AND P) = 11/100
-1. Find P(F OR P) = (45+25-11)/100 $\rightarrow$ 59/100
+Let $F$ = being a woman and $P$ = prefers mountain peaks.
 
-### 3.23 Example
+Using the addition rule:
+$$P(F \cup P) = P(F) + P(P) - P(F \cap P)$$
+$$= \frac{45}{100} + \frac{25}{100} - \frac{11}{100} = \frac{59}{100}$$
 
-| Year  |  Robbery  | Burglary  | Vandalism |  Vehicle  |    Total  |
-|-------|-----------|-----------|-----------|-----------|-----------|
-|   1   |     145.7 |     732.1 |      29.7 |     314.7 |    1222.2 |
-|   2   |     133.1 |     717.7 |      29.1 |     259.2 |    1139.1 |
-|   3   |     119.3 |     701.0 |      27.7 |     239.1 |    1087.1 |
-|   4   |     113.7 |     702.2 |      26.8 |     229.6 |    1072.3 |
-| Total |     511.8 |    2853.0 |     113.3 |    1042.6 |    4520.7 |
+### Example 3.23: Crime Rates by Year and Type
 
-TOTAL each column and each row. Total data = 4,520.7
+This table shows crime rates (per 100,000 population) across four years and four crime categories:
 
-- Find $P(Y_2 \cap R)$.
+| Year  |  Robbery  | Burglary  | Vandalism |  Vehicle Theft  |    Total  |
+|-------|-----------|-----------|-----------|-----------------|-----------|
+|   1   |     145.7 |     732.1 |      29.7 |     314.7       |    1222.2 |
+|   2   |     133.1 |     717.7 |      29.1 |     259.2       |    1139.1 |
+|   3   |     119.3 |     701.0 |      27.7 |     239.1       |    1087.1 |
+|   4   |     113.7 |     702.2 |      26.8 |     229.6       |    1072.3 |
+| Total |     511.8 |    2853.0 |     113.3 |    1042.6       |    4520.7 |
 
-    $ P(Y_2 \cap R) \rightarrow $ 
+#### a. Joint probability — Find P(Year 2 AND Robbery)
 
-    $ P(Y_2) + P(R) - P(Y_2 \cup R) \rightarrow $
+Let $Y_2$ = year 2 and $R$ = robbery.
 
-    $ P(Y_2 \cap R) = \frac{1139.1}{4520.7} + \frac {511.8}{4520.7} - P(Y_2 \cup R) \rightarrow $
+The intersection is the interior cell at year 2, robbery column:
+$$P(Y_2 \cap R) = \frac{133.1}{4520.7} \approx 0.0294$$
 
-    $ P(Y_2 \cap R) = \frac{1139.1}{4520.7} + \frac {511.8}{4520.7} - [\frac{1139.1}{4520.7} +\frac {511.8}{4520.7} - \frac{133.1}{4520.7})] \rightarrow $
+Note: This is read directly from the table. Do *not* use the addition rule for intersections; the cell already contains what you need.
 
-    $ P(Y_2 \cap R) = \frac{133.1}{4520.7} \rightarrow P(Y_2 \cap R) = 0.0294 $
+#### b. Joint probability — Find P(Year 3 AND Burglary)
 
-- Find P(Y3 AND Burglary).
+$$P(Y_3 \cap B) = \frac{701.0}{4520.7} \approx 0.1551$$
 
-    $ P(Y_3 \cap B) \rightarrow $
+#### c. Union probability — Find P(Year 3 OR Burglary)
 
-    $ 701 / 4520.7 $
+Let $Y_3$ = year 3 and $B$ = burglary.
 
-    $ 0.1551 $
+Using the addition rule:
+$$P(Y_3 \cup B) = P(Y_3) + P(B) - P(Y_3 \cap B)$$
+$$= \frac{1087.1}{4520.7} + \frac{2853.0}{4520.7} - \frac{701.0}{4520.7}$$
+$$= \frac{1087.1 + 2853.0 - 701.0}{4520.7} = \frac{3239.1}{4520.7} \approx 0.717$$
 
-- Find P(Y3 OR Burglary).
+#### d. Conditional probability — Find P(Year 4 | Vandalism)
 
-    $ P(Y_3 \cup B) \rightarrow $
+Let $Y_4$ = year 4 and $V$ = vandalism.
 
-    $ P(Y_3 + B) - P(Y_3 \cap B) $
+Given that the crime is vandalism, the reduced sample space is the "Vandalism" column (total = 113.3).
+Of that total, 26.8 is from year 4:
+$$P(Y_4 \mid V) = \frac{26.8}{113.3} \approx 0.236$$
 
-    $ (1087.1 + 2853.0 - 701) / 4520.7 $
+### Key Habits for Contingency Table Problems
 
-    $ 3239.7 / 4520.7 \approx 0.717 $
+1. **Read intersections directly**: An interior cell already shows the count of observations in both categories. Use it directly without trying to compute it from marginals or apply other rules.
 
+2. **Identify the reduced sample space for conditionals**: When asked for $P(A \mid B)$, the denominator is the total for the condition ($B$), not the grand total.
 
-- Find $P(Y_4 | V_a)$.
+3. **Use the addition rule for unions, not intersections**: The rule $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ combines two events. To find the overlap ($P(A \cap B)$), read the cell directly.
 
-    $ P(Y_4) = 1072.3 / 4520.7 $
-    
-    $ P(V_a) =  113.3 / 4520.7 $
-
-    $ P(Y_4|V_a) \rightarrow $
-
-    $ P(Y_4) / P(Y_4 \cap V_a) \rightarrow $
-
-    $ \frac {1072.3}{4520.7} / \frac{26.8}{4520.7} $
-    
-
-- Find P(Vehicle | Year 1).
-
+4. **Marginal vs. joint**: Marginal probabilities use row/column totals; joint probabilities use interior cells. Always check the dimension of what you're calculating.

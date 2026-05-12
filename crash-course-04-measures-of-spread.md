@@ -2,7 +2,7 @@
 
 ## Interquartile Range
 
-- Doesn't consider extreme values
+- Doesn't excludes extreme values by design
 - looks at the spread of the middle 50% of data
 
 ## Variance

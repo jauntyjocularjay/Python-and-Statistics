@@ -1,10 +1,8 @@
 import statistics as Statistics
-import PyTils.console as console
 
 # source: https://www.geeksforgeeks.org/python/statistics-with-python/
 
 def main():
-    console.clear()
     # Measure of Central Tendency
     # A single value that attempts to describe a set of data. Three main tendencies.
     # Mean: the sum of observations divided by the number of observations
@@ -107,9 +105,5 @@ def main():
     print( "     2. take the square root")
     print( "   b. use statistics.stdev(data_list)") 
     print(f"   c. The standard deviation of {data} is {Statistics.stdev(data)}") 
-
-    
-
-
 
 main()
