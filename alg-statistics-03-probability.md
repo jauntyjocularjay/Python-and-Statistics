@@ -659,3 +659,15 @@ $$P(Y_4 \mid V) = \frac{26.8}{113.3} \approx 0.236$$
 3. **Use the addition rule for unions, not intersections**: The rule $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ combines two events. To find the overlap ($P(A \cap B)$), read the cell directly.
 
 4. **Marginal vs. joint**: Marginal probabilities use row/column totals; joint probabilities use interior cells. Always check the dimension of what you're calculating.
+
+## 3.5 Tree and Venn Diagrams
+
+Tree diagrams are used to map out the possible results in a sample space. Branches are labeled with frequencies or probabilities.
+
+### Example 3.24
+
+In an urn, there are 11 balls. Three balls are red (R) and eight balls are blue (B). Draw two balls, one at a time, with replacement. "With replacement" means that you put the first ball back in the urn before you select the second ball. The tree diagram using frequencies that show all the possible outcomes follows.
+
+![Tree Diagram for 11 balls](./assets/3 Probability/3-24 ex Tree Diagram.webp)
+
+
