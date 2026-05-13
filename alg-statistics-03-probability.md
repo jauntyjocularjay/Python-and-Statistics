@@ -668,6 +668,6 @@ Tree diagrams are used to map out the possible results in a sample space. Branch
 
 In an urn, there are 11 balls. Three balls are red (R) and eight balls are blue (B). Draw two balls, one at a time, with replacement. "With replacement" means that you put the first ball back in the urn before you select the second ball. The tree diagram using frequencies that show all the possible outcomes follows.
 
-![Tree Diagram for 11 balls](./assets/3 Probability/3-24 ex Tree Diagram.webp)
+![Tree Diagram for 11 balls](./assets/3Probability/3-24exTreeDiagram.webp)
 
 
