@@ -668,6 +668,53 @@ Tree diagrams are used to map out the possible results in a sample space. Branch
 
 In an urn, there are 11 balls. Three balls are red (R) and eight balls are blue (B). Draw two balls, one at a time, with replacement. "With replacement" means that you put the first ball back in the urn before you select the second ball. The tree diagram using frequencies that show all the possible outcomes follows.
 
-![Tree Diagram for 11 balls](./assets/3Probability/3-24exTreeDiagram.webp)
+![Tree Diagram for ex 3.24](./assets/alg//3Probability/3-24exTreeDiagram.webp)
 
+The first set of branches represents the first draw. The second set of branches represents the second draw. Each of the outcomes is distinct.There are a total of 11 balls in the urn. Draw two balls, one at a time, with replacement. There are 11(11) = 121 outcomes, the size of the sample space.
 
+#### Problem 3.24
+
+- a. List the 24 BR outcomes: B1R1, B1R2, B1R3, ...
+
+``` python
+sample_space = [
+    'B1R1', 'B1R2', 'B1R3',
+    'B2R1', 'B2R2', 'B2R3',
+    'B3R1', 'B3R2', 'B3R3',
+    'B4R1', 'B4R2', 'B4R3',
+    'B5R1', 'B5R2', 'B5R3',
+    'B6R1', 'B6R2', 'B6R3',
+    'B7R1', 'B7R2', 'B7R3',
+    'B8R1', 'B8R2', 'B8R3'
+]
+```
+
+- b. Using the tree diagram, calculate P(RR).
+  - 9/121
+- c. Using the tree diagram, calculate P(RB OR BR).
+  - 48/121
+- d. Using the tree diagram, calculate P(R on 1st draw AND B on 2nd draw).
+  - 24/121
+- e. Using the tree diagram, calculate P(R on 2nd draw GIVEN B on 1st draw).
+  - 24/88
+- f. Using the tree diagram, calculate P(BB).
+  - 64/121
+- g. Using the tree diagram, calculate P(B on the 2nd draw given R on the first draw).
+  - 24/33
+
+---
+
+### Example 3.25
+
+An urn has three red marbles and eight blue marbles in it. Draw two marbles, one at a time, this time without replacement, from the urn. "Without replacement" means that you do not put the first ball back before you select the second marble. Following is a tree diagram for this situation. The branches are labeled with probabilities instead of frequencies. The numbers at the ends of the branches are calculated by multiplying the numbers on the two corresponding branches.
+
+![Tree Diagram for ex 3.25](./assets/alg//3Probability/3-25exTreeDiagram.webp)
+
+#### Problem 3.25
+
+- a. P(RR) = 6/110
+- b. Fill in the blanks: P(RB OR BR) = (3/11)⁢ (8/10)⁢ + ( 8/11 )( 3/10 ) = ⁢ 48/110
+- c. P(R on 2nd|B on 1st) = 24/80 = 3/10
+- d. Fill in the blanks: P(R on 1st AND B on 2nd) = P(RB) = (3/11)(8/10) = 24/110
+- e. Find P(BB) = 56/110
+- f. Find P(B on 2nd|R on 1st) = 24/30 = 8/10 = 4/5
