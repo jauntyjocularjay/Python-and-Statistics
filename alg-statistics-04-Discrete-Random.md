@@ -70,7 +70,7 @@ binomial experiment takes place when the number of successes is counted in one o
 
 The mean (experiments to expect the first success) is $ μ = (p)^{-1} $
 
-### Example 4.18
+#### Example 4.18
 
 A safety engineer feels that 35% of all industrial accidents in the plant are caused by failure of employees to follow instructions. They decide to look at the accident reports (selected randomly and replaced in the pile after reading) until they find one that shows an accident caused by failure of employees to follow instructions. On average, how many reports would the safety engineer expect to look at until they find a report showing an accident caused by employee failure to follow instructions? What is the probability that the safety engineer will have to examine at least three reports until they find a report showing an accident caused by employee failure to follow instructions?
 
@@ -81,7 +81,7 @@ Let X = the number of accidents the safety engineer must examine until they find
 
 $ μ = (p)^{-1} \rightarrow (35/100)^{-1} \rightarrow (100/3.5) ≈ 2.8 $
 
-### Example 4.19
+#### Example 4.19
 
 Suppose that you are looking for a student at your college who lives within five miles of you. You know that 55% of the 25,000 students do live within five miles of you. You randomly contact students from the college until one says they live within five miles of you. What is the probability that you need to contact four people?
 
@@ -103,7 +103,7 @@ c. What are p and q?
 
 d. The probability question is P(_5/100_)
 
-## Geometric Distribution Function Notation
+### Geometric Distribution Function Notation
 
 $ x $ ~ $ G(p) $
 
@@ -112,13 +112,13 @@ $ x $ ~ $ G(p) $
 - G(): with a geometric distribution
 - p: where p is the probability of success
 
-### Case 1: Random Variable x is event of first success
+#### Case 1: Random Variable x is event of first success
 
 Equation: $ p(x)=(1-p)^{x-1} p $
 
 Standard Deviation: $ σ = \sqrt{ \frac {p}{(1-p)^2}} $
 
-### Case 2: Random Variable x is number of failures before success
+#### Case 2: Random Variable x is number of failures before success
 
 Equation: $ P(x) = (1-p)^{x} p $
 
@@ -126,7 +126,7 @@ Mean: $ μ = \frac{1-p}{p} $
 
 Standard Deviation: $σ = \sqrt{ \frac{1-p}{p} } \Rightarrow \sqrt{μ_{case 2}} $
 
-### Example 4.20
+#### Example 4.20
 
 Assume that the probability of a defective computer component is 0.02. Components are randomly selected. Find the probability that the first defect is caused by the seventh component tested. How many components do you expect to test until one is found to be defective?
 
@@ -140,7 +140,7 @@ Find P(x = 7). P(x = 7) = 0.0177
 - $ (1 - p) = 0.98 $
 - $ P(x) = p^1 \cdot (1-p)^{x-1} \rightarrow (0.02) * (0.98)^6 \rightarrow 0.0177 $
 
-### Example 4.21
+#### Example 4.21
 
 The lifetime risk of developing cancer is about one in 67 (1.5%). Let X = the number of people you ask until one says they have cancer. Then X is a discrete random variable with a geometric distribution:
 

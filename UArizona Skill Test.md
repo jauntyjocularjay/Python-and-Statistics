@@ -1,6 +1,6 @@
 # Skill Test Topics
 
-## Python:
+## Python
 
 ### Basic Data Types
 
@@ -31,9 +31,9 @@ reading and writing to a file.
 1. Mathematical expectation, and
 1. Special probability distributions
 
-Understand when and how to 
+Understand when and how to
 
-1. use discrete and 
+1. use discrete probability
 1. continuous probability
 
 models in univariate context.

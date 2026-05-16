@@ -662,17 +662,19 @@ $$P(Y_4 \mid V) = \frac{26.8}{113.3} \approx 0.236$$
 
 ## 3.5 Tree and Venn Diagrams
 
+### Tree Diagram
+
 Tree diagrams are used to map out the possible results in a sample space. Branches are labeled with frequencies or probabilities.
 
-### Example 3.24
+#### Example 3.24
 
 In an urn, there are 11 balls. Three balls are red (R) and eight balls are blue (B). Draw two balls, one at a time, with replacement. "With replacement" means that you put the first ball back in the urn before you select the second ball. The tree diagram using frequencies that show all the possible outcomes follows.
 
-![Tree Diagram for ex 3.24](./assets/alg//3Probability/3-24exTreeDiagram.webp)
+![Tree Diagram for ex 3.24](./assets/alg/3Probability/3-24exTreeDiagram.webp)
 
 The first set of branches represents the first draw. The second set of branches represents the second draw. Each of the outcomes is distinct.There are a total of 11 balls in the urn. Draw two balls, one at a time, with replacement. There are 11(11) = 121 outcomes, the size of the sample space.
 
-#### Problem 3.24
+##### Problem 3.24
 
 - a. List the 24 BR outcomes: B1R1, B1R2, B1R3, ...
 
@@ -704,13 +706,13 @@ sample_space = [
 
 ---
 
-### Example 3.25
+#### Example 3.25
 
 An urn has three red marbles and eight blue marbles in it. Draw two marbles, one at a time, this time without replacement, from the urn. "Without replacement" means that you do not put the first ball back before you select the second marble. Following is a tree diagram for this situation. The branches are labeled with probabilities instead of frequencies. The numbers at the ends of the branches are calculated by multiplying the numbers on the two corresponding branches.
 
 ![Tree Diagram for ex 3.25](./assets/alg//3Probability/3-25exTreeDiagram.webp)
 
-#### Problem 3.25
+##### Problem 3.25
 
 - a. P(RR) = 6/110
 - b. Fill in the blanks: P(RB OR BR) = (3/11)⁢ (8/10)⁢ + ( 8/11 )( 3/10 ) = ⁢ 48/110
@@ -718,3 +720,32 @@ An urn has three red marbles and eight blue marbles in it. Draw two marbles, one
 - d. Fill in the blanks: P(R on 1st AND B on 2nd) = P(RB) = (3/11)(8/10) = 24/110
 - e. Find P(BB) = 56/110
 - f. Find P(B on 2nd|R on 1st) = 24/30 = 8/10 = 4/5
+
+### Venn Diagram
+
+A Venn diagram is a picture that represents the outcomes of an experiment. It generally consists of a box that represents the sample space S together with circles or ovals. The circles or ovals represent events.
+
+#### Example 3.30
+
+##### Problem
+
+A person with type O blood and a negative Rh factor (Rh-) can donate blood to any person with any blood type. Four percent of African Americans have type O blood and a negative RH factor, 5−10% of African Americans have the Rh- factor, and 51% have type O blood.
+
+![Tree Diagram for ex 3.30](./assets/alg/3Probability/3-30exVennDiagram.webp)
+
+The “O” circle represents the African Americans with type O blood. The “Rh-“ oval represents the African Americans with the Rh- factor.
+
+We will take the average of 5% and 10% and use 7.5% as the percent of African Americans who have the Rh- factor. Let O = African American with Type O blood and R = African American with Rh- factor.
+
+- P(O) = ___________
+  - P(O) = 510/1000
+- P(R) = ___________
+  - P(R) = 75/1000
+- P(O AND R) = ___________
+  - P(O AND R) = 40/1000
+- P(O OR R) = ____________
+  - P(O OR R) = (510 + 75 - 40)/1000 = (585 - 40)/1000 = 545/1000 = 54.5%
+- In the Venn Diagram, describe the overlapping area using a complete sentence.
+  - The overlapping area in the Venn diagram is the population of type-O blood people with RH- blood.
+- In the Venn Diagram, describe the area in the rectangle but outside both the circle and the oval using a complete sentence.
+  - Outside of the circle and oval are the people with neither type-O blood nor RH- factor.
