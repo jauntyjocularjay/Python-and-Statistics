@@ -1,21 +1,22 @@
 # 4 Discrete Random Variable
 
-## 4.1 Probability Distribution Function (PDF) for a Discrete Random Variable
+## 4.1 Probability Mass Function (PMF) for a Discrete Random Variable
 
-a discrete probability function (PDF) has
+a probability mass function (PMF) has
 
 1. each probability is between [Zero, one] inclusive
 2. The sum of the probabilities is one
 
-|   P(x)       |     x     |
-|--------------|-----------|
-| $ P(x_0) $   |  2/50     |
-| $ P(x_1) $   |  4/50     |
-| $ P(x_2) $   | 23/50     |
-| $ P(x_3) $   |  9/50     |
-| $ P(x_4) $   |  4/50     |
-| $ P(x_5) $   |  1/50     |
-| $ \sum P(x)$ | 50/50 = 1 |
+|   x  |  P(X=x) |
+| ---- | ------- |
+|   0  |   2/50  |
+|   1  |   4/50  |
+|   2  |  23/50  |
+|   3  |   9/50  |
+|   4  |   4/50  |
+|   5  |   1/50  |
+
+$ \sum P(x)$ = 50/50 = 1
 
 ## 4.2 Mean Expected Value and Standard Deviation
 
@@ -53,18 +54,12 @@ binomial experiment takes place when the number of successes is counted in one o
 ## 4.4 Geometric Distribution
 
 1. a trial is repeated until a success  
-
-2. Repeated trials are independent  
-
-3. probability of success (p), failure (q) remain the same for each trial  
-
-4. random variable x is the number of trials in which the first success occurs  
-
-5. random variable is discrete  
-
-6. Probability of success & failure are constant  
-
-7. "memory loss" - all prior attempts do not affect the outcome
+1. Repeated trials are independent  
+1. probability of success (p), failure (q) remain the same for each trial  
+1. random variable x is the number of trials in which the first success occurs  
+1. random variable is discrete  
+1. Probability of success & failure are constant  
+1. "memory loss" - all prior attempts do not affect the outcome
 
 ### The Mean (μ)
 
@@ -184,11 +179,11 @@ Problem
 - b. What is the group of interest?
   - _Men_
 - c. How many are in the group of interest?
-  - _15/33_
+  - _15_
 - d. How many are in the other group?
-  - _18/33_
+  - _18_
 - e. Let X = _________ on the committee. What values does X take on?
-  - _x=4_
+  - _7_
 - f. The probability question is P(_______).
   - _P(x > 4)_
 
@@ -205,7 +200,7 @@ The average number of loaves of bread put on a shelf in a bakery in a half-hour 
 
 Let X = the number of loaves of bread put on the shelf in five minutes. If the average number of loaves put on the shelf in 30 minutes (half-hour) is 12, then the average number of loaves put on the shelf in five minutes is (5/30)(12) = 2 loaves of bread.
 
-The probability question asks you to find P(x = 3).
+The probability question asks you to find P(X = 3).
 
 ### Example 4.27 Problem
 
@@ -219,22 +214,12 @@ $$
 
 Poisson Distribution tells you how likely it is to observe exactly (x) events, given an average rate $(\mu)$.
 
-$$
-P(X) = pois(X, \mu),\quad x=0,1,2,\dots
-$$
+$ P(X=x) = pois(x), \quad x=0,1,2\dots $
 
 #### Poisson point probability formula
 
 $$
-pois(x) = \frac { \mu^x \cdot e^{-\mu} } { x! }
-$$
-
-#### Special Tail-Probability (complement) case
-
-Use the Special Tail-Probability (complement) case when it is easier to calculate the complement of a tail event.
-
-$$
-P(X_m) = 1 - [\frac { \mu^0 \cdot e^{-\mu} } { 1 } + \frac { \mu^x{_m} \cdot e^{-\mu} } { X_m! }]
+P(X=x) = pois(x; \mu) = \frac { \mu^x \cdot e^{-\mu} } { x! }
 $$
 
 ### Example 4.29
@@ -243,12 +228,24 @@ Leah receives about six telephone calls between 8 a.m. and 10 a.m. What is the p
 
 Let X = the number of calls Leah receives in 15 minutes. (The interval of interest is 15 minutes or 1/4 hour.)
 
+In this example, use the complement rule. Since the Poisson distribution is discrete, the event $ X > 1 $
+
+$ X > 1 $ includes the values: $ 2, 3, 4, ... $
+
+Rather than summing all of those probabilities, it is easier to subtract the complement:
+
+$$ P(X>1)=1-P(X\le1)=1-[P(X=0)+P(X=1)]. $$
+
 $$
-P(x > 1) \mu = \frac{6}{2} * \frac{1}{4} \Rightarrow 3 * \frac{1}{4} \Rightarrow \frac{3}{4} \Rightarrow 0.75
+P(X_m) = 1 - [\frac { \mu^0 \cdot e^{-\mu} } { 1 } + \frac { \mu^x{_m} \cdot e^{-\mu} } { X_m! }]
 $$
 
 $$
-P(x > 1) \Rightarrow 1 - [P(0)+P(1)] \Rightarrow
+\mu = \frac{6}{2} * \frac{1}{4} \Rightarrow 3 * \frac{1}{4} \Rightarrow \frac{3}{4} \Rightarrow 0.75
+$$
+
+$$
+P(x > 1) \Rightarrow 1 - [P(X=0)+P(X=1)] \Rightarrow
 $$
 
 $$
