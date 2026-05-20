@@ -153,3 +153,84 @@ X ~ 𝐺⁡( $ \frac{1}{67} $ ) or X ~ $ 𝐺⁡(0.015) $
 - What is the probability that you must ask 20 people?
   - G(x) = $ (\frac{66}{67})^{19} \frac{1}{67} $
 - Find the (i) mean and (ii) standard deviation of X
+
+## 4.5 Hypergeometric Distribution
+
+1. take samples from two groups  
+2. concerned with the first group, the "group of interest"  
+3. sample _without_ replacement from the combined groups  
+4. each pick is _dependent_ (sampling without replacement)  
+5. not dealing w/ Bernoulli trials
+
+---
+
+### Example 4.22 Problem
+
+A candy dish contains 100 jelly beans and 80 gumdrops. Fifty candies are picked at random. What is the probability that 35 of the 50 are gumdrops? The two groups are jelly beans and gumdrops. Since the probability question asks for the probability of picking gumdrops, the group of interest (first group) is gumdrops. The size of the group of interest (first group) is 80. The size of the second group is 100. The size of the sample is 50 (jelly beans or gumdrops). Let X = the number of gumdrops in the sample of 50. X takes on the values x = 0, 1, 2, ..., 50. What is the probability statement written mathematically?
+
+- Probability statement is: P(x=35)
+
+---
+
+### Example 4.24
+
+You are president of an on-campus special events organization. You need a committee of seven students to plan a special birthday party for the president of the college. Your organization consists of 18 women and 15 men. You are interested in the number of men on your committee. If the members of the committee are randomly selected, what is the probability that your committee has more than four men?
+
+This is a hypergeometric problem because you are choosing your committee from two groups (men and women).
+Problem
+
+- a. Are you choosing with or without replacement?
+  - _without replacement_
+- b. What is the group of interest?
+  - _Men_
+- c. How many are in the group of interest?
+  - _15/33_
+- d. How many are in the other group?
+  - _18/33_
+- e. Let X = _________ on the committee. What values does X take on?
+  - _x=4_
+- f. The probability question is P(_______).
+  - _P(x > 4)_
+
+---
+
+## 4.6 Poisson Distribution
+
+1. The Poisson probability distribution gives the probability of a number of events occurring in a fixed interval of time or space if these events happen with a known average rate and independently of the time since the last event.
+1. The Poisson distribution may be used to approximate the binomial if the probability of success is "small" (such as 0.01) and the number of trials is "large" (such as 1,000). You will verify the relationship in the homework exercises. n is the number of trials, and p is the probability of a "success."
+
+### Example 4.26
+
+The average number of loaves of bread put on a shelf in a bakery in a half-hour period is 12. Of interest is the number of loaves of bread put on the shelf in five minutes. The time interval of interest is five minutes. What is the probability that the number of loaves, selected randomly, put on the shelf in five minutes is three?
+
+Let X = the number of loaves of bread put on the shelf in five minutes. If the average number of loaves put on the shelf in 30 minutes (half-hour) is 12, then the average number of loaves put on the shelf in five minutes is (5/30)(12) = 2 loaves of bread.
+
+The probability question asks you to find P(x = 3).
+
+### Example 4.27 Problem
+
+A bank expects to receive six bad checks per day, on average. What is the probability of the bank getting fewer than five bad checks on any given day? Of interest is the number of checks the bank receives in one day, so the time interval of interest is one day. Let X = the number of bad checks the bank receives in one day. If the bank expects to receive six bad checks per day then the average is six checks per day. Write a mathematical statement for the probability question.
+
+$$
+P(X < 5)
+$$
+
+### Poisson Distribution Formula
+
+$$
+P(x) = \frac { \mu^x \cdot e^{-\mu} } { x! }
+$$
+
+### Example 4.29
+
+Leah receives about six telephone calls between 8 a.m. and 10 a.m. What is the probability that Leah receives more than one call in the next 15 minutes?
+
+Let X = the number of calls Leah receives in 15 minutes. (The interval of interest is 15 minutes or 1/4 hour.)
+
+$$
+P(x > 1) = \frac{6}{2} \frac{calls}{hr} * \frac{1}{4} \Rightarrow 3 \frac{calls}{hr} * \frac{1}{4} \Rightarrow \frac{3}{4} \frac{calls}{hr} \Rightarrow 0.75 \frac{calls}{hr}
+$$
+
+$$
+P(x > 1) \Rightarrow 1 - [P(x=0)+P(x=1)] \Rightarrow 
+$$

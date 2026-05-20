@@ -35,3 +35,14 @@ Mean, Median, Mode are all methods to find the 'average' in some way.
 | $P(A \mid B)$ = Probability of A given B; restrict sample space to B                 | $P(A \mid B)$ = change in reference (denominator)         |
 | Conditional probability: denominator is the total for the given condition            | “GIVEN X” means use X’s total as denominator              |
 | Marginal probability: denominator is the grand total unless a condition is specified | Use grand total unless “GIVEN” is specified               |
+
+## Multiplication Rule
+
+- $ P(A \cap B) = P(B) \cdot P(B|A) $
+- $ P(A|B) = \frac{P(A \cap B)}{P(B)} $
+- $ P(B) = \frac{P(A \cap B)}{P(A|B)} $
+
+## Addition Rule
+
+- $ P(A \cup B) = P(A+B) - P(A \cap B) $
+- $ P(A \cap B) = P(A+B) - P(A \cup B) $
