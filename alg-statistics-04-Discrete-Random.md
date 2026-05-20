@@ -215,10 +215,26 @@ $$
 P(X < 5)
 $$
 
-### Poisson Distribution Formula
+### Poisson Distribution
+
+Poisson Distribution tells you how likely it is to observe exactly (x) events, given an average rate $(\mu)$.
 
 $$
-P(x) = \frac { \mu^x \cdot e^{-\mu} } { x! }
+P(X) = pois(X, \mu),\quad x=0,1,2,\dots
+$$
+
+#### Poisson point probability formula
+
+$$
+pois(x) = \frac { \mu^x \cdot e^{-\mu} } { x! }
+$$
+
+#### Special Tail-Probability (complement) case
+
+Use the Special Tail-Probability (complement) case when it is easier to calculate the complement of a tail event.
+
+$$
+P(X_m) = 1 - [\frac { \mu^0 \cdot e^{-\mu} } { 1 } + \frac { \mu^x{_m} \cdot e^{-\mu} } { X_m! }]
 $$
 
 ### Example 4.29
@@ -228,9 +244,13 @@ Leah receives about six telephone calls between 8 a.m. and 10 a.m. What is the p
 Let X = the number of calls Leah receives in 15 minutes. (The interval of interest is 15 minutes or 1/4 hour.)
 
 $$
-P(x > 1) = \frac{6}{2} \frac{calls}{hr} * \frac{1}{4} \Rightarrow 3 \frac{calls}{hr} * \frac{1}{4} \Rightarrow \frac{3}{4} \frac{calls}{hr} \Rightarrow 0.75 \frac{calls}{hr}
+P(x > 1) \mu = \frac{6}{2} * \frac{1}{4} \Rightarrow 3 * \frac{1}{4} \Rightarrow \frac{3}{4} \Rightarrow 0.75
 $$
 
 $$
-P(x > 1) \Rightarrow 1 - [P(x=0)+P(x=1)] \Rightarrow 
+P(x > 1) \Rightarrow 1 - [P(0)+P(1)] \Rightarrow
+$$
+
+$$
+1 - [\frac{(0.75^0) \cdot e^{-0.75}}{1} + \frac{(0.75^1) \cdot e^{-0.75}}{1} ] \approx 1−[0.4724+0.3543] \approx 0.1733
 $$
