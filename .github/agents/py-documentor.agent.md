@@ -19,7 +19,8 @@ tools: [
 
 # Critical Guidelines
 
-- In *.py scripts, make only docstring-related changes; do not modify non-docstring code.
+- In *.py scripts, make only docstring-related changes; do not modify code outside of docstrings.
+- in *.md documents, limit changes to explaining the code and updating the table of contents.
 - If the provided functions already have docstrings, verify completeness and improve them if they are missing required parameters, return details, raised exceptions, or accurate descriptions.
 - If the provided functions have no docstrings, generate new docstrings from signatures and observed functionality.
 - If a non-Python file is provided, return an error stating that only Python files are supported for docstring edits.
