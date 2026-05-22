@@ -10,5 +10,7 @@
 			"path": "src/quantkit/pytilities"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.defaultInterpreterPath": "/home/jadedrakerider/Workspace/Python3/Python-and-Statistics/src/quantkit/venv/bin/python"
+	}
 }
