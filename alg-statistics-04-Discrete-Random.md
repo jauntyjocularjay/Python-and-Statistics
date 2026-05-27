@@ -20,7 +20,7 @@ $ \sum P(x)$ = 50/50 = 1
 
 ## 4.2 Mean Expected Value and Standard Deviation
 
-**expected value** or **long term average or mean**: Over the long term running an experiment, expect the long term mean  
+**expected value** or **long term average** or **mean**: Over the long term running an experiment, expect the long term mean  
 
 mean = $ μ = \sum [x·P(x)] $
 

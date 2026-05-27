@@ -12,5 +12,3 @@ because remembering is for humans
 
 - $ P(A \cup B) = P(A+B) - P(A \cap B) $
 - $ P(A \cap B) = P(A+B) - P(A \cup B) $
-
-
